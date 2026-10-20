@@ -4,7 +4,7 @@ SKIP_DIRS = {"venv", ".git", "__pycache__", "emoji_cache"}
 SKIP_PATTERNS = [".env", ".env.*", "*.bak*", "patch_*.py", "test_q*.png", "*.pyc", "make_zip.py"]
 
 stamp = datetime.datetime.now().strftime("%Y%m%d_%H%M")
-out = os.path.expanduser(f"~/rumi-bot_{stamp}.zip")
+out = os.path.expanduser(f"~/saloni-bot_{stamp}.zip")
 count = 0
 
 with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
@@ -14,7 +14,7 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
             if any(fnmatch.fnmatch(f, p) for p in SKIP_PATTERNS):
                 continue
             path = os.path.join(root, f)
-            z.write(path, os.path.join("rumi-bot", path[2:]))
+            z.write(path, os.path.join("saloni-bot", path[2:]))
             count += 1
 
 print("Files zipped:", count)
