@@ -91,3 +91,10 @@ bot/
 ├── services/            # Economy, card engines, AI clients, quote rendering, scheduler
 └── utils/               # Compatibility layer, common helpers, error handlers
 ```
+
+---
+
+## Creators
+
+Developed and maintained with ❤️ by **Lilesh** and **Ayush**.
+
